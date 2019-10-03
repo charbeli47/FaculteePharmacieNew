@@ -1,0 +1,29 @@
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400);
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:700);
+@import url(//fonts.googleapis.com/css?family=Roboto:400);
+@import url(//fonts.googleapis.com/css?family=Roboto:500);
+@import url(//fonts.googleapis.com/css?family=Roboto:400italic);
+@import url(//fonts.googleapis.com/css?family=Roboto:300);
+@import url(//fonts.googleapis.com/css?family=Roboto:700);
+@import url(//fonts.googleapis.com/css?family=Roboto:900);
+
+
+.num2, .soc_icons > li > a, .camera_wrap .camera_pag .camera_pag_ul li span{ behavior:url(js/PIE.htc); position:relative;}
+#back-top { behavior:url(js/PIE.htc);}
+
+a.magnifier2:hover .zoom{
+	display: block;
+}
+a.magnifier2 .zoom, .bottom_p{
+	display: none;
+}
+body{
+	min-width: 1343px;
+}
+
+.slider_txt1 br{display: none;}
+
+#contact-form input,
+#contact-form textarea {
+	overflow: hidden;
+}

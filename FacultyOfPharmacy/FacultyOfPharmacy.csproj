@@ -1,0 +1,1835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FacultyOfPharmacy</RootNamespace>
+    <AssemblyName>FacultyOfPharmacy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\tm\css\camera.css" />
+    <Content Include="assets\tm\css\ie.css" />
+    <Content Include="assets\tm\css\prettify.css" />
+    <Content Include="assets\tm\css\tm_docs.css" />
+    <Content Include="assets\tm\img\camera\blank.gif" />
+    <Content Include="assets\tm\img\camera\camera-loader.gif" />
+    <Content Include="assets\tm\img\camera\camera_skins.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay1.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay10.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay2.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay3.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay4.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay5.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay6.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay7.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay8.png" />
+    <Content Include="assets\tm\img\camera\patterns\overlay9.png" />
+    <Content Include="assets\tm\img\camera\slides\big_bunny_fake.jpg" />
+    <Content Include="assets\tm\img\camera\slides\bridge.jpg" />
+    <Content Include="assets\tm\img\camera\slides\leaf.jpg" />
+    <Content Include="assets\tm\img\camera\slides\road.jpg" />
+    <Content Include="assets\tm\img\camera\slides\sea.jpg" />
+    <Content Include="assets\tm\img\camera\slides\shelter.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\big_bunny_fake.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\bridge.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\header_bg.png" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\leaf.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\road.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\sea.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\shelter.jpg" />
+    <Content Include="assets\tm\img\camera\slides\thumbs\tree.jpg" />
+    <Content Include="assets\tm\img\icons\20x20\AIM.png" />
+    <Content Include="assets\tm\img\icons\20x20\Apple.png" />
+    <Content Include="assets\tm\img\icons\20x20\Blogger.png" />
+    <Content Include="assets\tm\img\icons\20x20\Delicious.png" />
+    <Content Include="assets\tm\img\icons\20x20\Digg.png" />
+    <Content Include="assets\tm\img\icons\20x20\Dopplr.png" />
+    <Content Include="assets\tm\img\icons\20x20\Evernote.png" />
+    <Content Include="assets\tm\img\icons\20x20\Facebook.png" />
+    <Content Include="assets\tm\img\icons\20x20\Flickr.png" />
+    <Content Include="assets\tm\img\icons\20x20\Google.png" />
+    <Content Include="assets\tm\img\icons\20x20\Linkedin.png" />
+    <Content Include="assets\tm\img\icons\20x20\Mail.png" />
+    <Content Include="assets\tm\img\icons\20x20\MobileMe.png" />
+    <Content Include="assets\tm\img\icons\20x20\MySpace.png" />
+    <Content Include="assets\tm\img\icons\20x20\Picasa.png" />
+    <Content Include="assets\tm\img\icons\20x20\RSS.png" />
+    <Content Include="assets\tm\img\icons\20x20\Skype.png" />
+    <Content Include="assets\tm\img\icons\20x20\Stumble_Upon.png" />
+    <Content Include="assets\tm\img\icons\20x20\Technorati.png" />
+    <Content Include="assets\tm\img\icons\20x20\Twitter.png" />
+    <Content Include="assets\tm\img\icons\20x20\Vimeo.png" />
+    <Content Include="assets\tm\img\icons\20x20\Windows.png" />
+    <Content Include="assets\tm\img\icons\20x20\Yahoo.png" />
+    <Content Include="assets\tm\img\icons\20x20\Youtube.png" />
+    <Content Include="assets\tm\img\icons\delicious.png" />
+    <Content Include="assets\tm\img\icons\email.png" />
+    <Content Include="assets\tm\img\icons\facebook.png" />
+    <Content Include="assets\tm\img\icons\feed.png" />
+    <Content Include="assets\tm\img\icons\flickr.png" />
+    <Content Include="assets\tm\img\icons\linkedin.png" />
+    <Content Include="assets\tm\img\icons\stumble.png" />
+    <Content Include="assets\tm\img\icons\tripadvisor.png" />
+    <Content Include="assets\tm\img\icons\twitter.png" />
+    <Content Include="assets\tm\img\icons\vimeo.png" />
+    <Content Include="assets\tm\img\icons\youtube.png" />
+    <Content Include="assets\tm\img\stock_images\120x120_1.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_2.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_3.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_4.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_5.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_6.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_7.jpg" />
+    <Content Include="assets\tm\img\stock_images\120x120_8.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_1.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_2.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_3.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_4.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_5.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_6.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_7.jpg" />
+    <Content Include="assets\tm\img\stock_images\700x430_8.jpg" />
+    <Content Include="assets\tm\img\tm\digits.png" />
+    <Content Include="assets\tm\img\tm\plus-minus.png" />
+    <Content Include="assets\tm\img\tm\portfolio-1col.png" />
+    <Content Include="assets\tm\img\tm\portfolio-2col+capt.png" />
+    <Content Include="assets\tm\img\tm\portfolio-2col.png" />
+    <Content Include="assets\tm\img\tm\portfolio-3col+capt.png" />
+    <Content Include="assets\tm\img\tm\portfolio-3col.png" />
+    <Content Include="assets\tm\img\tm\portfolio-4col+capt.png" />
+    <Content Include="assets\tm\img\tm\portfolio-4col.png" />
+    <Content Include="assets\tm\img\tm\pro_button.png" />
+    <Content Include="assets\tm\img\tm\right_arrow.png" />
+    <Content Include="assets\tm\img\tm\tm_home.png" />
+    <Content Include="assets\tm\img\tm\twitter_bird_2.png" />
+    <Content Include="assets\tm\img\tm\ul_list1_marker.png" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\HtmlAgilityPack.pdb" />
+    <Content Include="bin\HtmlAgilityPack.XML" />
+    <Content Include="cms\add-department.aspx" />
+    <Content Include="cms\add-gallery-images.aspx" />
+    <Content Include="cms\add-gallery.aspx" />
+    <Content Include="cms\add-home-gallery.aspx" />
+    <Content Include="cms\add-research-teams.aspx" />
+    <Content Include="cms\add-speciality.aspx" />
+    <Content Include="cms\colorbox\colorbox.css" />
+    <Content Include="cms\colorbox\colorbox.js" />
+    <Content Include="cms\colorbox\images\border.png" />
+    <Content Include="cms\colorbox\images\controls.png" />
+    <Content Include="cms\colorbox\images\loading.gif" />
+    <Content Include="cms\colorbox\images\loading_background.png" />
+    <Content Include="cms\add-academics.aspx" />
+    <Content Include="cms\academics.aspx" />
+    <Content Include="cms\administrative.aspx" />
+    <Content Include="cms\add-administrative.aspx" />
+    <Content Include="cms\add-continuous-learning.aspx" />
+    <Content Include="cms\add-education.aspx" />
+    <Content Include="cms\continuous-learning.aspx" />
+    <Content Include="cms\add-official-statement.aspx" />
+    <Content Include="cms\add-semester.aspx" />
+    <Content Include="cms\calendar.aspx" />
+    <Content Include="cms\add-calendar.aspx" />
+    <Content Include="cms\add-graduation-category.aspx" />
+    <Content Include="cms\add-graduation.aspx" />
+    <Content Include="cms\add-graduation-files.aspx" />
+    <Content Include="cms\add-orientation-files.aspx" />
+    <Content Include="cms\alumni-events.aspx" />
+    <Content Include="cms\add-alumni-events.aspx" />
+    <Content Include="cms\Activities.aspx" />
+    <Content Include="cms\add-activities.aspx" />
+    <Content Include="cms\add-services.aspx" />
+    <Content Include="cms\add-events.aspx" />
+    <Content Include="cms\add-news.aspx" />
+    <Content Include="cms\add-quick-links.aspx" />
+    <Content Include="cms\quick-links.aspx" />
+    <Content Include="cms\news.aspx" />
+    <Content Include="cms\events.aspx" />
+    <Content Include="cms\research-teams.aspx" />
+    <Content Include="cms\Services.aspx" />
+    <Content Include="cms\orientation-files.aspx" />
+    <Content Include="cms\graduation-files.aspx" />
+    <Content Include="cms\graduation.aspx" />
+    <Content Include="cms\graduation-categories.aspx" />
+    <Content Include="cms\gallery-images.aspx" />
+    <Content Include="cms\gallery.aspx" />
+    <Content Include="cms\home-gallery.aspx" />
+    <Content Include="cms\semesters.aspx" />
+    <Content Include="cms\specialities.aspx" />
+    <Content Include="cms\official-statement.aspx" />
+    <Content Include="cms\education.aspx" />
+    <Content Include="cms\css\content.css" />
+    <Content Include="cms\css\Jcrop.gif" />
+    <Content Include="cms\css\jquery.Jcrop.css" />
+    <Content Include="cms\css\jquery.Jcrop.min.css" />
+    <Content Include="cms\css\login.css" />
+    <Content Include="cms\css\navi.css" />
+    <Content Include="cms\css\style.css" />
+    <Content Include="cms\css\word.css" />
+    <Content Include="cms\default.aspx" />
+    <Content Include="cms\delete-table.aspx" />
+    <Content Include="cms\departments.aspx" />
+    <Content Include="cms\encrypt.aspx" />
+    <Content Include="cms\faculty-of-pharmacy.aspx" />
+    <Content Include="cms\img\bg_arr_left.png" />
+    <Content Include="cms\img\bg_arr_nav.png" />
+    <Content Include="cms\img\bg_box_head.jpg" />
+    <Content Include="cms\img\bg_login_top.jpg" />
+    <Content Include="cms\img\bg_top.jpg" />
+    <Content Include="cms\img\i_add.png" />
+    <Content Include="cms\img\i_add_page.png" />
+    <Content Include="cms\img\i_add_user.png" />
+    <Content Include="cms\img\i_archive.png" />
+    <Content Include="cms\img\i_block_users.png" />
+    <Content Include="cms\img\i_carousel.png" />
+    <Content Include="cms\img\i_category.png" />
+    <Content Include="cms\img\i_config.png" />
+    <Content Include="cms\img\i_contact.png" />
+    <Content Include="cms\img\i_delete.png" />
+    <Content Include="cms\img\i_edit.png" />
+    <Content Include="cms\img\i_error.png" />
+    <Content Include="cms\img\i_ok.png" />
+    <Content Include="cms\img\i_page.png" />
+    <Content Include="cms\img\i_photo.png" />
+    <Content Include="cms\img\i_report.png" />
+    <Content Include="cms\img\i_users.png" />
+    <Content Include="cms\img\i_view_page.png" />
+    <Content Include="cms\img\i_warning.png" />
+    <Content Include="cms\js\highcharts.js" />
+    <Content Include="cms\js\highcharts_init.js" />
+    <Content Include="cms\js\jquery-1.7.2.min.js" />
+    <Content Include="cms\js\jquery.color.js" />
+    <Content Include="cms\js\jquery.Jcrop.js" />
+    <Content Include="cms\js\jquery.Jcrop.min.js" />
+    <Content Include="cms\js\jquery.min.js" />
+    <Content Include="cms\js\tiny_mce\classes\adapter\jquery\adapter.js" />
+    <Content Include="cms\js\tiny_mce\classes\adapter\jquery\jquery.tinymce.js" />
+    <Content Include="cms\js\tiny_mce\classes\adapter\prototype\adapter.js" />
+    <Content Include="cms\js\tiny_mce\classes\AddOnManager.js" />
+    <Content Include="cms\js\tiny_mce\classes\ControlManager.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\DOMUtils.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\Element.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\EventUtils.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\Range.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\RangeUtils.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\ScriptLoader.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\Selection.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\Serializer.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\Sizzle.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\TreeWalker.js" />
+    <Content Include="cms\js\tiny_mce\classes\dom\TridentSelection.js" />
+    <Content Include="cms\js\tiny_mce\classes\Editor.js" />
+    <Content Include="cms\js\tiny_mce\classes\EditorCommands.js" />
+    <Content Include="cms\js\tiny_mce\classes\EditorManager.js" />
+    <Content Include="cms\js\tiny_mce\classes\firebug\firebug-lite.js" />
+    <Content Include="cms\js\tiny_mce\classes\ForceBlocks.js" />
+    <Content Include="cms\js\tiny_mce\classes\Formatter.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\DomParser.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Entities.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Node.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\SaxParser.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Schema.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Serializer.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Styles.js" />
+    <Content Include="cms\js\tiny_mce\classes\html\Writer.js" />
+    <Content Include="cms\js\tiny_mce\classes\LegacyInput.js" />
+    <Content Include="cms\js\tiny_mce\classes\Popup.js" />
+    <Content Include="cms\js\tiny_mce\classes\tinymce.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Button.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\ColorSplitButton.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Container.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Control.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\DropMenu.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\KeyboardNavigation.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\ListBox.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Menu.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\MenuButton.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\MenuItem.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\NativeListBox.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Separator.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\SplitButton.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\Toolbar.js" />
+    <Content Include="cms\js\tiny_mce\classes\ui\ToolbarGroup.js" />
+    <Content Include="cms\js\tiny_mce\classes\UndoManager.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\Cookie.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\Dispatcher.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\JSON.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\JSONP.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\JSONRequest.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\Quirks.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\URI.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\VK.js" />
+    <Content Include="cms\js\tiny_mce\classes\util\XHR.js" />
+    <Content Include="cms\js\tiny_mce\classes\WindowManager.js" />
+    <Content Include="cms\js\tiny_mce\jquery.tinymce.js" />
+    <Content Include="cms\js\tiny_mce\langs\en.js" />
+    <Content Include="cms\js\tiny_mce\license.txt" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="cms\js\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="cms\js\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="cms\js\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="cms\js\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\media\media.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="cms\js\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\preview\example.html" />
+    <Content Include="cms\js\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="cms\js\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="cms\js\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="cms\js\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="cms\js\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="cms\js\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="cms\js\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\style\props.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="cms\js\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="cms\js\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="cms\js\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\table\row.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\table\table.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="cms\js\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="cms\js\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\plugins\template\template.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="cms\js\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="cms\js\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="cms\js\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="cms\js\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="cms\js\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="cms\js\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="cms\js\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="cms\js\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="cms\js\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="cms\js\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="cms\js\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="cms\js\tiny_mce\tiny_mce.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_dev.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_jquery.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_jquery_src.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_prototype.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_prototype_src.js" />
+    <Content Include="cms\js\tiny_mce\tiny_mce_src.js" />
+    <Content Include="cms\js\tiny_mce\utils\editable_selects.js" />
+    <Content Include="cms\js\tiny_mce\utils\form_utils.js" />
+    <Content Include="cms\js\tiny_mce\utils\mctabs.js" />
+    <Content Include="cms\js\tiny_mce\utils\validate.js" />
+    <Content Include="cms\lists\image_list.js" />
+    <Content Include="cms\lists\link_list.js" />
+    <Content Include="cms\lists\media_list.js" />
+    <Content Include="cms\lists\template_list.js" />
+    <Content Include="cms\login.aspx" />
+    <Content Include="cms\logout.aspx" />
+    <Content Include="cms\manage-users.aspx" />
+    <Content Include="cms\media\logo.jpg" />
+    <Content Include="cms\media\logo_over.jpg" />
+    <Content Include="cms\media\sample.avi" />
+    <Content Include="cms\media\sample.flv" />
+    <Content Include="cms\media\sample.mov" />
+    <Content Include="cms\media\sample.ram" />
+    <Content Include="cms\media\sample.swf" />
+    <Content Include="cms\mission.aspx" />
+    <Content Include="cms\objectives.aspx" />
+    <Content Include="cms\settings.aspx" />
+    <Content Include="cms\teachers.aspx" />
+    <Content Include="cms\templates\layout1.htm" />
+    <Content Include="cms\templates\snippet1.htm" />
+    <Content Include="cms\ul.aspx" />
+    <Content Include="cms\update-sorting.aspx" />
+    <Content Include="css\camera.css" />
+    <Content Include="css\component.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\flickity.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\grid.css" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\stuck.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\superfish.css" />
+    <Content Include="css\touchTouch.css" />
+    <Content Include="default.aspx" />
+    <Content Include="en\contact-us.aspx" />
+    <Content Include="en\continuous-education.aspx" />
+    <Content Include="en\continuous-education-details.aspx" />
+    <Content Include="en\calendar.aspx" />
+    <Content Include="en\calendar-details.aspx" />
+    <Content Include="en\academics.aspx" />
+    <Content Include="en\academics-details.aspx" />
+    <Content Include="en\administratives-details.aspx" />
+    <Content Include="en\administratives.aspx" />
+    <Content Include="en\careers.aspx" />
+    <Content Include="en\activities-details.aspx" />
+    <Content Include="en\activities.aspx" />
+    <Content Include="en\alumni-events.aspx" />
+    <Content Include="en\alumni-events-details.aspx" />
+    <Content Include="en\gallery-details.aspx" />
+    <Content Include="en\marine-algae.aspx" />
+    <Content Include="en\news-details.aspx" />
+    <Content Include="en\news.aspx" />
+    <Content Include="en\events-details.aspx" />
+    <Content Include="en\events.aspx" />
+    <Content Include="en\pharmaclub.aspx" />
+    <Content Include="en\quick-links.aspx" />
+    <Content Include="en\research-team.aspx" />
+    <Content Include="en\services-details.aspx" />
+    <Content Include="en\services.aspx" />
+    <Content Include="en\HROrganigram.aspx" />
+    <Content Include="en\dean-word.aspx" />
+    <Content Include="en\default.aspx" />
+    <Content Include="en\education.aspx" />
+    <Content Include="en\graduation-details.aspx" />
+    <Content Include="en\graduation.aspx" />
+    <Content Include="en\history.aspx" />
+    <Content Include="en\mission.aspx" />
+    <Content Include="en\Organigram.aspx" />
+    <Content Include="en\orientation.aspx" />
+    <Content Include="en\photo-gallery.aspx" />
+    <Content Include="en\Students-affairs.aspx" />
+    <Content Include="fonts\bpicons\bpicons.svg" />
+    <Content Include="fonts\bpicons\license.txt" />
+    <Content Include="fonts\font-awesome.css" />
+    <Content Include="fonts\pixelfabric-clothes\fonts\pixelfabric-clothes.svg" />
+    <Content Include="fonts\pixelfabric-clothes\style.css" />
+    <Content Include="fr\academics-details.aspx" />
+    <Content Include="fr\academics.aspx" />
+    <Content Include="fr\activities-details.aspx" />
+    <Content Include="fr\activities.aspx" />
+    <Content Include="fr\administratives-details.aspx" />
+    <Content Include="fr\administratives.aspx" />
+    <Content Include="fr\alumni-events-details.aspx" />
+    <Content Include="fr\alumni-events.aspx" />
+    <Content Include="fr\calendar-details.aspx" />
+    <Content Include="fr\calendar.aspx" />
+    <Content Include="fr\careers.aspx" />
+    <Content Include="fr\contact-us.aspx" />
+    <Content Include="fr\continuous-education-details.aspx" />
+    <Content Include="fr\continuous-education.aspx" />
+    <Content Include="fr\dean-word.aspx" />
+    <Content Include="fr\default.aspx" />
+    <Content Include="fr\education.aspx" />
+    <Content Include="fr\events-details.aspx" />
+    <Content Include="fr\events.aspx" />
+    <Content Include="fr\gallery-details.aspx" />
+    <Content Include="fr\graduation-details.aspx" />
+    <Content Include="fr\graduation.aspx" />
+    <Content Include="fr\history.aspx" />
+    <Content Include="fr\HROrganigram.aspx" />
+    <Content Include="fr\marine-algae.aspx" />
+    <Content Include="fr\mission.aspx" />
+    <Content Include="fr\news-details.aspx" />
+    <Content Include="fr\news.aspx" />
+    <Content Include="fr\Organigram.aspx" />
+    <Content Include="fr\orientation.aspx" />
+    <Content Include="fr\pharmaclub.aspx" />
+    <Content Include="fr\photo-gallery.aspx" />
+    <Content Include="fr\quick-links.aspx" />
+    <Content Include="fr\research-team.aspx" />
+    <Content Include="fr\research-teams.aspx" />
+    <Content Include="fr\services-details.aspx" />
+    <Content Include="fr\services.aspx" />
+    <Content Include="fr\Students-affairs.aspx" />
+    <Content Include="images\bg1.png" />
+    <Content Include="images\bg2.png" />
+    <Content Include="images\bg_pic1.jpg" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\camera-loader.gif" />
+    <Content Include="images\contact-us.png" />
+    <Content Include="images\dress.png" />
+    <Content Include="images\email-document.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\grid.svg" />
+    <Content Include="images\header_search_icon.png" />
+    <Content Include="images\jacket.png" />
+    <Content Include="images\link.png" />
+    <Content Include="images\list_arrow.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\page1_pic1.jpg" />
+    <Content Include="images\page1_pic2.jpg" />
+    <Content Include="images\page1_pic3.jpg" />
+    <Content Include="images\page2_pic1.jpg" />
+    <Content Include="images\page2_pic2.jpg" />
+    <Content Include="images\page2_pic3.jpg" />
+    <Content Include="images\page2_pic4.jpg" />
+    <Content Include="images\page2_pic5.jpg" />
+    <Content Include="images\page4_pic1.jpg" />
+    <Content Include="images\page4_pic2.jpg" />
+    <Content Include="images\page4_pic3.jpg" />
+    <Content Include="images\Phone-icon.png" />
+    <Content Include="images\shirt.png" />
+    <Content Include="images\shoe.png" />
+    <Content Include="images\sis-online.png" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\slide3.jpg" />
+    <Content Include="images\subindicator.png" />
+    <Content Include="images\touchtouch\bg_transparent.png" />
+    <Content Include="images\trousers.png" />
+    <Content Include="js\camera.js" />
+    <Content Include="js\flickity.pkgd.min.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-migrate-1.2.1.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.equalheights.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mobile.customized.min.js" />
+    <Content Include="js\jquery.mobilemenu.js" />
+    <Content Include="js\jquery.tools.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\scroll_to_top.js" />
+    <Content Include="js\superfish.js" />
+    <Content Include="js\tmStickUp.js" />
+    <Content Include="js\touchTouch.jquery.js" />
+    <Content Include="location.html" />
+    <Content Include="Media\0deff03e-1bbd-4a41-a848-6bea403b04a8.png" />
+    <Content Include="Media\17fe0c91-7eb2-4687-ae7f-7844b03c7063.jpg" />
+    <Content Include="Media\2416c30a-d1c9-4440-9258-ac8791590943.jpg" />
+    <Content Include="Media\2a37fcdd-6c02-420c-b7a1-a5b832b94d9c.jpg" />
+    <Content Include="Media\48aaf2b0-f5b3-45b2-b464-f66f56ccc4cf.jpg" />
+    <Content Include="Media\5469b35f-77da-412d-824a-29ae73fe6746.jpg" />
+    <Content Include="Media\5fc25e82-b4fe-45e5-800c-2023b20f7088.jpg" />
+    <Content Include="Media\67b5446c-5af8-45d5-9192-8eab52a524d7.jpg" />
+    <Content Include="Media\7c2c9bac-dcff-4438-a55c-75ebf38b247f.jpg" />
+    <Content Include="Media\b79d272d-cad9-4f0c-9999-54777dbb3be5.jpg" />
+    <Content Include="Media\be1e0bf9-0799-46cf-b7ac-a55acfe4ca98.jpg" />
+    <Content Include="Media\c498fd05-0528-4ea2-97bc-a41a0e34d865.jpg" />
+    <Content Include="Media\d4677230-3f5d-4494-a036-d5632f008366.jpg" />
+    <Content Include="Media\f1401845-dd3a-4f17-9750-b80445c1c3e7.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ar\ar.master.cs">
+      <DependentUpon>ar.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ar\ar.master.designer.cs">
+      <DependentUpon>ar.master</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-department.aspx.cs">
+      <DependentUpon>add-department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-department.aspx.designer.cs">
+      <DependentUpon>add-department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-gallery-images.aspx.cs">
+      <DependentUpon>add-gallery-images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-gallery-images.aspx.designer.cs">
+      <DependentUpon>add-gallery-images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-gallery.aspx.cs">
+      <DependentUpon>add-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-gallery.aspx.designer.cs">
+      <DependentUpon>add-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-home-gallery.aspx.cs">
+      <DependentUpon>add-home-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-home-gallery.aspx.designer.cs">
+      <DependentUpon>add-home-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-research-teams.aspx.cs">
+      <DependentUpon>add-research-teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-research-teams.aspx.designer.cs">
+      <DependentUpon>add-research-teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-speciality.aspx.cs">
+      <DependentUpon>add-speciality.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-speciality.aspx.designer.cs">
+      <DependentUpon>add-speciality.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\cms.Master.cs">
+      <DependentUpon>cms.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\cms.Master.designer.cs">
+      <DependentUpon>cms.Master</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-academics.aspx.cs">
+      <DependentUpon>add-academics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-academics.aspx.designer.cs">
+      <DependentUpon>add-academics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\academics.aspx.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\academics.aspx.designer.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\administrative.aspx.cs">
+      <DependentUpon>administrative.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\administrative.aspx.designer.cs">
+      <DependentUpon>administrative.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-administrative.aspx.cs">
+      <DependentUpon>add-administrative.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-administrative.aspx.designer.cs">
+      <DependentUpon>add-administrative.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-continuous-learning.aspx.cs">
+      <DependentUpon>add-continuous-learning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-continuous-learning.aspx.designer.cs">
+      <DependentUpon>add-continuous-learning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-education.aspx.cs">
+      <DependentUpon>add-education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-education.aspx.designer.cs">
+      <DependentUpon>add-education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\continuous-learning.aspx.cs">
+      <DependentUpon>continuous-learning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\continuous-learning.aspx.designer.cs">
+      <DependentUpon>continuous-learning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-official-statement.aspx.cs">
+      <DependentUpon>add-official-statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-official-statement.aspx.designer.cs">
+      <DependentUpon>add-official-statement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-semester.aspx.cs">
+      <DependentUpon>add-semester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-semester.aspx.designer.cs">
+      <DependentUpon>add-semester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\calendar.aspx.designer.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-calendar.aspx.cs">
+      <DependentUpon>add-calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-calendar.aspx.designer.cs">
+      <DependentUpon>add-calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-graduation-category.aspx.cs">
+      <DependentUpon>add-graduation-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-graduation-category.aspx.designer.cs">
+      <DependentUpon>add-graduation-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-graduation.aspx.cs">
+      <DependentUpon>add-graduation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-graduation.aspx.designer.cs">
+      <DependentUpon>add-graduation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-graduation-files.aspx.cs">
+      <DependentUpon>add-graduation-files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-graduation-files.aspx.designer.cs">
+      <DependentUpon>add-graduation-files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-orientation-files.aspx.cs">
+      <DependentUpon>add-orientation-files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-orientation-files.aspx.designer.cs">
+      <DependentUpon>add-orientation-files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\alumni-events.aspx.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\alumni-events.aspx.designer.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-alumni-events.aspx.cs">
+      <DependentUpon>add-alumni-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-alumni-events.aspx.designer.cs">
+      <DependentUpon>add-alumni-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Activities.aspx.cs">
+      <DependentUpon>Activities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Activities.aspx.designer.cs">
+      <DependentUpon>Activities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-activities.aspx.cs">
+      <DependentUpon>add-activities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-activities.aspx.designer.cs">
+      <DependentUpon>add-activities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-services.aspx.cs">
+      <DependentUpon>add-services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-services.aspx.designer.cs">
+      <DependentUpon>add-services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-events.aspx.cs">
+      <DependentUpon>add-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-events.aspx.designer.cs">
+      <DependentUpon>add-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-news.aspx.cs">
+      <DependentUpon>add-news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-news.aspx.designer.cs">
+      <DependentUpon>add-news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\add-quick-links.aspx.cs">
+      <DependentUpon>add-quick-links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\add-quick-links.aspx.designer.cs">
+      <DependentUpon>add-quick-links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\quick-links.aspx.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\quick-links.aspx.designer.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\events.aspx.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\events.aspx.designer.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\research-teams.aspx.cs">
+      <DependentUpon>research-teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\research-teams.aspx.designer.cs">
+      <DependentUpon>research-teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\orientation-files.aspx.cs">
+      <DependentUpon>orientation-files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\orientation-files.aspx.designer.cs">
+      <DependentUpon>orientation-files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\graduation-files.aspx.cs">
+      <DependentUpon>graduation-files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\graduation-files.aspx.designer.cs">
+      <DependentUpon>graduation-files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\graduation.aspx.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\graduation.aspx.designer.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\graduation-categories.aspx.cs">
+      <DependentUpon>graduation-categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\graduation-categories.aspx.designer.cs">
+      <DependentUpon>graduation-categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\deleteGalleryImage.ashx.cs">
+      <DependentUpon>deleteGalleryImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\gallery-images.aspx.cs">
+      <DependentUpon>gallery-images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\gallery-images.aspx.designer.cs">
+      <DependentUpon>gallery-images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\gallery.aspx.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\gallery.aspx.designer.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\home-gallery.aspx.cs">
+      <DependentUpon>home-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\home-gallery.aspx.designer.cs">
+      <DependentUpon>home-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\semesters.aspx.cs">
+      <DependentUpon>semesters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\semesters.aspx.designer.cs">
+      <DependentUpon>semesters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\specialities.aspx.cs">
+      <DependentUpon>specialities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\specialities.aspx.designer.cs">
+      <DependentUpon>specialities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\official-statement.aspx.cs">
+      <DependentUpon>official-statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\official-statement.aspx.designer.cs">
+      <DependentUpon>official-statement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\education.aspx.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\education.aspx.designer.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\delete-table.aspx.cs">
+      <DependentUpon>delete-table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\delete-table.aspx.designer.cs">
+      <DependentUpon>delete-table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\departments.aspx.cs">
+      <DependentUpon>departments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\departments.aspx.designer.cs">
+      <DependentUpon>departments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\encrypt.aspx.cs">
+      <DependentUpon>encrypt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\encrypt.aspx.designer.cs">
+      <DependentUpon>encrypt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\faculty-of-pharmacy.aspx.cs">
+      <DependentUpon>faculty-of-pharmacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\faculty-of-pharmacy.aspx.designer.cs">
+      <DependentUpon>faculty-of-pharmacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\js\highcharts_init.ashx.cs">
+      <DependentUpon>highcharts_init.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\manage-users.aspx.cs">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\manage-users.aspx.designer.cs">
+      <DependentUpon>manage-users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\mission.aspx.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\mission.aspx.designer.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\objectives.aspx.cs">
+      <DependentUpon>objectives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\objectives.aspx.designer.cs">
+      <DependentUpon>objectives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\teachers.aspx.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\teachers.aspx.designer.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\ul.aspx.cs">
+      <DependentUpon>ul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\ul.aspx.designer.cs">
+      <DependentUpon>ul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\update-sorting.aspx.cs">
+      <DependentUpon>update-sorting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\update-sorting.aspx.designer.cs">
+      <DependentUpon>update-sorting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\uploadGalleryImage.ashx.cs">
+      <DependentUpon>uploadGalleryImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.Master.cs">
+      <DependentUpon>default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.Master.designer.cs">
+      <DependentUpon>default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="en\contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\continuous-education.aspx.cs">
+      <DependentUpon>continuous-education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\continuous-education.aspx.designer.cs">
+      <DependentUpon>continuous-education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\continuous-education-details.aspx.cs">
+      <DependentUpon>continuous-education-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\continuous-education-details.aspx.designer.cs">
+      <DependentUpon>continuous-education-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\calendar.aspx.designer.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\calendar-details.aspx.cs">
+      <DependentUpon>calendar-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\calendar-details.aspx.designer.cs">
+      <DependentUpon>calendar-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\academics.aspx.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\academics.aspx.designer.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\academics-details.aspx.cs">
+      <DependentUpon>academics-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\academics-details.aspx.designer.cs">
+      <DependentUpon>academics-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\administratives-details.aspx.cs">
+      <DependentUpon>administratives-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\administratives-details.aspx.designer.cs">
+      <DependentUpon>administratives-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\administratives.aspx.cs">
+      <DependentUpon>administratives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\administratives.aspx.designer.cs">
+      <DependentUpon>administratives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\careers.aspx.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\careers.aspx.designer.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\activities-details.aspx.cs">
+      <DependentUpon>activities-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\activities-details.aspx.designer.cs">
+      <DependentUpon>activities-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\activities.aspx.cs">
+      <DependentUpon>activities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\activities.aspx.designer.cs">
+      <DependentUpon>activities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\alumni-events.aspx.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\alumni-events.aspx.designer.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\alumni-events-details.aspx.cs">
+      <DependentUpon>alumni-events-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\alumni-events-details.aspx.designer.cs">
+      <DependentUpon>alumni-events-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\marine-algae.aspx.cs">
+      <DependentUpon>marine-algae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\marine-algae.aspx.designer.cs">
+      <DependentUpon>marine-algae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\news-details.aspx.cs">
+      <DependentUpon>news-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\news-details.aspx.designer.cs">
+      <DependentUpon>news-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\events-details.aspx.cs">
+      <DependentUpon>events-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\events-details.aspx.designer.cs">
+      <DependentUpon>events-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\events.aspx.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\events.aspx.designer.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\pharmaclub.aspx.cs">
+      <DependentUpon>pharmaclub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\pharmaclub.aspx.designer.cs">
+      <DependentUpon>pharmaclub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\quick-links.aspx.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\quick-links.aspx.designer.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\research-team.aspx.cs">
+      <DependentUpon>research-team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\research-team.aspx.designer.cs">
+      <DependentUpon>research-team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\services-details.aspx.cs">
+      <DependentUpon>services-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\services-details.aspx.designer.cs">
+      <DependentUpon>services-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\HROrganigram.aspx.cs">
+      <DependentUpon>HROrganigram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\HROrganigram.aspx.designer.cs">
+      <DependentUpon>HROrganigram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\dean-word.aspx.cs">
+      <DependentUpon>dean-word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\dean-word.aspx.designer.cs">
+      <DependentUpon>dean-word.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\education.aspx.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\education.aspx.designer.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\en.master.cs">
+      <DependentUpon>en.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\en.master.designer.cs">
+      <DependentUpon>en.master</DependentUpon>
+    </Compile>
+    <Compile Include="en\graduation-details.aspx.cs">
+      <DependentUpon>graduation-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\graduation-details.aspx.designer.cs">
+      <DependentUpon>graduation-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\graduation.aspx.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\graduation.aspx.designer.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\mission.aspx.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\mission.aspx.designer.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Organigram.aspx.cs">
+      <DependentUpon>Organigram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Organigram.aspx.designer.cs">
+      <DependentUpon>Organigram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\orientation.aspx.cs">
+      <DependentUpon>orientation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\orientation.aspx.designer.cs">
+      <DependentUpon>orientation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\photo-gallery.aspx.cs">
+      <DependentUpon>photo-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\photo-gallery.aspx.designer.cs">
+      <DependentUpon>photo-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Students-affairs.aspx.cs">
+      <DependentUpon>Students-affairs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Students-affairs.aspx.designer.cs">
+      <DependentUpon>Students-affairs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\academics-details.aspx.cs">
+      <DependentUpon>academics-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\academics-details.aspx.designer.cs">
+      <DependentUpon>academics-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\academics.aspx.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\academics.aspx.designer.cs">
+      <DependentUpon>academics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\activities-details.aspx.cs">
+      <DependentUpon>activities-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\activities-details.aspx.designer.cs">
+      <DependentUpon>activities-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\activities.aspx.cs">
+      <DependentUpon>activities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\activities.aspx.designer.cs">
+      <DependentUpon>activities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\administratives-details.aspx.cs">
+      <DependentUpon>administratives-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\administratives-details.aspx.designer.cs">
+      <DependentUpon>administratives-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\administratives.aspx.cs">
+      <DependentUpon>administratives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\administratives.aspx.designer.cs">
+      <DependentUpon>administratives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\alumni-events-details.aspx.cs">
+      <DependentUpon>alumni-events-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\alumni-events-details.aspx.designer.cs">
+      <DependentUpon>alumni-events-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\alumni-events.aspx.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\alumni-events.aspx.designer.cs">
+      <DependentUpon>alumni-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\calendar-details.aspx.cs">
+      <DependentUpon>calendar-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\calendar-details.aspx.designer.cs">
+      <DependentUpon>calendar-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\calendar.aspx.designer.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\careers.aspx.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\careers.aspx.designer.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\continuous-education-details.aspx.cs">
+      <DependentUpon>continuous-education-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\continuous-education-details.aspx.designer.cs">
+      <DependentUpon>continuous-education-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\continuous-education.aspx.cs">
+      <DependentUpon>continuous-education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\continuous-education.aspx.designer.cs">
+      <DependentUpon>continuous-education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\dean-word.aspx.cs">
+      <DependentUpon>dean-word.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\dean-word.aspx.designer.cs">
+      <DependentUpon>dean-word.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\education.aspx.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\education.aspx.designer.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\events-details.aspx.cs">
+      <DependentUpon>events-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\events-details.aspx.designer.cs">
+      <DependentUpon>events-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\events.aspx.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\events.aspx.designer.cs">
+      <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\fr.master.cs">
+      <DependentUpon>fr.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\fr.master.designer.cs">
+      <DependentUpon>fr.master</DependentUpon>
+    </Compile>
+    <Compile Include="fr\gallery-details.aspx.cs">
+      <DependentUpon>gallery-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\gallery-details.aspx.designer.cs">
+      <DependentUpon>gallery-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\graduation-details.aspx.cs">
+      <DependentUpon>graduation-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\graduation-details.aspx.designer.cs">
+      <DependentUpon>graduation-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\graduation.aspx.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\graduation.aspx.designer.cs">
+      <DependentUpon>graduation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\HROrganigram.aspx.cs">
+      <DependentUpon>HROrganigram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\HROrganigram.aspx.designer.cs">
+      <DependentUpon>HROrganigram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\marine-algae.aspx.cs">
+      <DependentUpon>marine-algae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\marine-algae.aspx.designer.cs">
+      <DependentUpon>marine-algae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\mission.aspx.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\mission.aspx.designer.cs">
+      <DependentUpon>mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\news-details.aspx.cs">
+      <DependentUpon>news-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\news-details.aspx.designer.cs">
+      <DependentUpon>news-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\Organigram.aspx.cs">
+      <DependentUpon>Organigram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\Organigram.aspx.designer.cs">
+      <DependentUpon>Organigram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\orientation.aspx.cs">
+      <DependentUpon>orientation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\orientation.aspx.designer.cs">
+      <DependentUpon>orientation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\pharmaclub.aspx.cs">
+      <DependentUpon>pharmaclub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\pharmaclub.aspx.designer.cs">
+      <DependentUpon>pharmaclub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\photo-gallery.aspx.cs">
+      <DependentUpon>photo-gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\photo-gallery.aspx.designer.cs">
+      <DependentUpon>photo-gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\quick-links.aspx.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\quick-links.aspx.designer.cs">
+      <DependentUpon>quick-links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\research-team.aspx.cs">
+      <DependentUpon>research-team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\research-team.aspx.designer.cs">
+      <DependentUpon>research-team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\research-teams.aspx.cs">
+      <DependentUpon>research-teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\research-teams.aspx.designer.cs">
+      <DependentUpon>research-teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\services-details.aspx.cs">
+      <DependentUpon>services-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\services-details.aspx.designer.cs">
+      <DependentUpon>services-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fr\Students-affairs.aspx.cs">
+      <DependentUpon>Students-affairs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fr\Students-affairs.aspx.designer.cs">
+      <DependentUpon>Students-affairs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.Master" />
+    <Content Include="ar\ar.master" />
+    <Content Include="en\en.master" />
+    <Content Include="fr\fr.master" />
+    <Content Include="cms\cms.Master" />
+    <Content Include="cms\config.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="cms\js\highcharts_init.ashx" />
+    <Content Include="assets\tm\img\stock_images\Thumbs.db" />
+    <Content Include="assets\tm\img\tm\Thumbs.db" />
+    <Content Include="cms\deleteGalleryImage.ashx" />
+    <None Include="cms\js\tiny_mce\classes\firebug\FIREBUG.LICENSE" />
+    <None Include="cms\media\sample.dcr" />
+    <None Include="cms\media\sample.rm" />
+    <Content Include="Media\2089f0dc-38a0-4d03-adee-2e43de187e13.docx" />
+    <Content Include="Media\fbc1eede-7126-4eec-a0d3-fc586eaeb702.docx" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="images\touchtouch\Thumbs.db" />
+    <Content Include="cms\uploadGalleryImage.ashx" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\bpicons\bpicons.eot" />
+    <Content Include="fonts\bpicons\bpicons.ttf" />
+    <Content Include="fonts\bpicons\bpicons.woff" />
+    <Content Include="fonts\pixelfabric-clothes\.DS_Store" />
+    <Content Include="fonts\pixelfabric-clothes\fonts\pixelfabric-clothes.eot" />
+    <Content Include="fonts\pixelfabric-clothes\fonts\pixelfabric-clothes.ttf" />
+    <Content Include="fonts\pixelfabric-clothes\fonts\pixelfabric-clothes.woff" />
+    <Content Include="images\.DS_Store" />
+    <None Include="Properties\PublishProfiles\Faculty.pubxml" />
+    <None Include="Properties\PublishProfiles\Pharmacy.pubxml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{A2284345-5CCC-4042-B57D-511ED4587910}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>43244</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

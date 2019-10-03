@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="en.master.cs" Inherits="FacultyOfPharmacy.en.en" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:ContentPlaceHolder ID="head" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menu" runat="server">
+    <div class="container">
+    <div class="row">
+<div class="grid_3">
+									<h1><a href="default.aspx" ><table style="width:300px;"><tr><td rowspan="2"><img src="../images/logo.png" style="height:70px !important" ></td><td style="color:#3162a4;font-weight:bold;padding-left:5px;padding-top:10px;font-size:14px;height:30px">FACULTY OF PHARMACY</td></tr><tr><td style="color:#3162a4;font-weight:bold;padding-left:5px;padding-top:0px;font-size:14px" valign="top">Lebanese University</td></tr></table></a></h1>
+								</div>
+                                <div class="grid_8">
+                                    <table id="searchTBL" style="float:right;margin-top:42px"><tr><td style="vertical-align:middle">
+                                    <table><tr><td><a href="contact-us.aspx"><img src="../images/contact-us.png" style="height:20px"/> Contact us</a></td><td style="width:30px"></td><td><a href="quick-links.aspx"><img src="../images/link.png" style="height:20px"/> Quick Links</a></td></tr>
+                                        <tr><td colspan="2" height="5"></td></tr>
+                                        <tr><td><a target="_blank" href="../Media/calender-2015-2016.pdf"><img src="../images/calendar.png" style="height:20px"/> Calendar</a></td><td style="width:30px"></td><td><a href="http://sisol.ul.edu.lb/login" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIS Online</a></td></tr>
+                                    </table></td>
+                                        <td width="5" align="center"><div style="width:1px;border-left:1px solid black;height:50px;margin-left:10px;margin-right:10px"></div></td>
+                                        <td style="vertical-align:middle;font-size:18px">
+                                            <a id="A1" href="~/en/" runat="server">En</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                                            <a id="A2" href="~/fr/" runat="server">Fr</a>
+                                        <%--<form id="search1" action="search.php" method="GET" accept-charset="utf-8">
+										<input type="text" name="s" value="" onfocus="myFocus(this);" onblur="myBlur(this);"/>
+										<a onclick="document.getElementById('search1').submit()" class="more_btn3"></a>
+									</form>--%></td></tr>
+									</table>
+								</div>
+        </div>
+</div>
+								<div style="width:100%">
+									<nav><div style="width:1165px;margin:auto">
+										<ul class="sf-menu header_menu">
+											<li class="current"><a href="default.aspx">Home<strong></strong></a></li>
+											<li><a><span></span>About Us<strong></strong></a>
+													<ul class='submenu'>
+														<li><a href="dean-word.aspx">Dean Word</a></li>
+														<li><a href="mission.aspx">Mission</a></li>
+														<li><a href="history.aspx">History</a>
+															
+														</li>
+														<li><a href="Organigram.aspx">Studies map</a></li>
+														<li><a href="photo-gallery.aspx">Photo Gallery</a></li>
+													</ul>
+											 </li>
+											 <li><a href="#">Admissions<strong></strong></a>
+                                                 <ul class='submenu'>
+														<li><a href="Students-affairs.aspx">Students affairs</a></li>
+														<li><a href="graduation.aspx">Registration</a></li>
+                                                        <li><a href="orientation.aspx">Orientation</a></li>
+													</ul>
+											 </li>
+											 <li><a>Programs<strong></strong></a>
+                                                 <ul class='submenu'>
+														<li><a href="education.aspx">Cursus</a></li>
+														<li><a href="continuous-education.aspx">Continuous education</a></li>
+                                                        <li><a href="#">Internship</a></li>
+                                                        <li><a href="calendar.aspx">Schedule</a></li>
+													</ul>
+											 </li>
+											<li><a href="#">Human Resources<strong></strong></a>
+                                                <ul class='submenu'>
+														<li><a href="HROrganigram.aspx">Organigram</a></li>
+														<li><a>Academics</a><ul class='submenu'>
+                                                            <li><a href="academics.aspx?category=Faculty Council">Faculty Council</a></li>
+                                                            <li><a href="academics.aspx?category=Profs">Teaching Body</a></li>
+														</ul></li>
+                                                        
+                                                        
+                                                    <li><a href="administratives.aspx">Administratives</a></li>
+                                                        <li><a href="careers.aspx">Careers</a></li>
+													</ul>
+											</li>
+                                            <li><a href="#">Research<strong></strong></a>
+                                                <ul class='submenu'>
+                                                    <li><a>teams</a><ul class='submenu'>
+                                                        <%foreach (var team in reasearchTeams)
+                                                            { %>
+                                                        <li><a href="research-teams.aspx?id=<%=team.id %>"><%=team.entitle %></a></li>
+                                                        <% }%></ul>
+											</li>
+                                                    <li><a href="marine-algae.aspx">Marine Algae</a></li>
+                                                </ul></li>
+                                            <li><a>Student life<strong></strong></a>
+                                                <ul class='submenu'>
+														<li><a href="services.aspx">Services</a></li>
+														<li><a href="activities.aspx">Activities</a></li>
+													</ul>
+											</li>
+                                            <li id="last-li"><a href="#">Alumni<strong></strong></a>
+                                                <ul class='submenu'>
+														<li><a href="pharmaclub.aspx">Pharmaclub</a></li>
+														<li><a href="alumni-events.aspx">Events</a></li>
+													</ul>
+											</li>
+										</ul>
+                                        </div>
+									</nav>
+								</div>
+
+								
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div style="height:150px"></div>
+<asp:ContentPlaceHolder ID="main" runat="server" />
+</asp:Content>

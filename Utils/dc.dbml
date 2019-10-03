@@ -1,0 +1,1361 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PharmacyDB" Class="dcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC2-PC;Initial Catalog=PharmacyDB;User ID=sa" SettingsObjectName="Utils.Properties.Settings" SettingsPropertyName="PharmacyDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.AddAcademics" Method="AddAcademics">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cv" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="category" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUser" Method="UpdateUser">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddActivities" Method="AddActivities">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddAdministratifs" Method="AddAdministratifs">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddAlumni" Method="AddAlumni">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddAlumniEvents" Method="AddAlumniEvents">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_start" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="date_end" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Organizer" Parameter="organizer" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="AlumniId" Parameter="alumniId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddCalendar" Method="AddCalendar">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thumb" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddContinuousEducation" Method="AddContinuousEducation">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thumb" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddDepartment" Method="AddDepartment">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddEducation" Method="AddEducation">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="total_hours" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="theorie" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="td" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="tp" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="credits" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Parameter Name="pre_req" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="code" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="semesterId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddEvents" Method="AddEvents">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_start" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="date_end" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Organizer" Parameter="organizer" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddGraduation" Method="AddGraduation">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="artext" Type="System.String" DbType="NText" />
+    <Parameter Name="entext" Type="System.String" DbType="NText" />
+    <Parameter Name="frtext" Type="System.String" DbType="NText" />
+    <Parameter Name="categoryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arsmalltext" Type="System.String" DbType="NText" />
+    <Parameter Name="ensmalltext" Type="System.String" DbType="NText" />
+    <Parameter Name="frsmalltext" Type="System.String" DbType="NText" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddGraduationCategory" Method="AddGraduationCategory">
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddGraduationFile" Method="AddGraduationFile">
+    <Parameter Name="filename" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="GraduationId" Parameter="graduationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddNews" Method="AddNews">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_in" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="pdf" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddOfficialStatement" Method="AddOfficialStatement">
+    <Parameter Name="pdf" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="date_in" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddPageVisit" Method="AddPageVisit">
+    <Parameter Name="page_name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ip" Type="System.String" DbType="NText" />
+    <Parameter Name="browser" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="visite_date" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddQuickLinks" Method="AddQuickLinks">
+    <Parameter Name="link" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddResearchTeams" Method="AddResearchTeams">
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enmembersText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frmembersText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enpublicationsText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frpublicationsText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddSemester" Method="AddSemester">
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="specialityId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddServices" Method="AddServices">
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddSpeciality" Method="AddSpeciality">
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateGallery" Method="CreateGallery">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SmallImage" Parameter="smallImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="LargeImage" Parameter="largeImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="categoryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateGalleryCategory" Method="CreateGalleryCategory">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateGalleryImage" Method="CreateGalleryImage">
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="galleryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateGroup" Method="CreateGroup">
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateHomeGallery" Method="CreateHomeGallery">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateOrientationFile" Method="CreateOrientationFile">
+    <Parameter Name="filename" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreatePermission" Method="CreatePermission">
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreatePolicy" Method="CreatePolicy">
+    <Parameter Name="permissionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="event_permitted" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateUser" Method="CreateUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteAcademics" Method="DeleteAcademics">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteActivities" Method="DeleteActivities">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteAdministratifs" Method="DeleteAdministratifs">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteAlumniEvents" Method="DeleteAlumniEvents">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteCalendar" Method="DeleteCalendar">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteContinuousEducation" Method="DeleteContinuousEducation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteDepartment" Method="DeleteDepartment">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteEducation" Method="DeleteEducation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteEvents" Method="DeleteEvents">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGallery" Method="DeleteGallery">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGalleryCategory" Method="DeleteGalleryCategory">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGalleryImage" Method="DeleteGalleryImage">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGraduation" Method="DeleteGraduation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGraduationCategory" Method="DeleteGraduationCategory">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGraduationFile" Method="DeleteGraduationFile">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGroup" Method="DeleteGroup">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteHomeGallery" Method="DeleteHomeGallery">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteNews" Method="DeleteNews">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteOfficialStatement" Method="DeleteOfficialStatement">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteOrientationFile" Method="DeleteOrientationFile">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeletePermission" Method="DeletePermission">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeletePolicy" Method="DeletePolicy">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeletePolicyByGroupId" Method="DeletePolicyByGroupId">
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteQuickLinks" Method="DeleteQuickLinks">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteResearchTeams" Method="DeleteResearchTeams">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteSemester" Method="DeleteSemester">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteServices" Method="DeleteServices">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteSpeciality" Method="DeleteSpeciality">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteteAlumni" Method="DeleteteAlumni">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteteAlumniEvents" Method="DeleteteAlumniEvents">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUser" Method="DeleteUser">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAcademics" Method="UpdateAcademics">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cv" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="category" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateActivities" Method="UpdateActivities">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAdministratifs" Method="UpdateAdministratifs">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAlumni" Method="UpdateAlumni">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAlumniEvents" Method="UpdateAlumniEvents">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_start" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="date_end" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Organizer" Parameter="organizer" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="AlumniId" Parameter="alumniId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCalendar" Method="UpdateCalendar">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thumb" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCMSUserLoginDate" Method="UpdateCMSUserLoginDate">
+    <Parameter Name="date_login" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="userId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateContinuousEducation" Method="UpdateContinuousEducation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thumb" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateDepartment" Method="UpdateDepartment">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="endescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="icon" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateEducation" Method="UpdateEducation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="total_hours" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="theorie" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="td" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="tp" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="credits" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Parameter Name="pre_req" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="code" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="semesterId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateEvents" Method="UpdateEvents">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_start" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="date_end" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Organizer" Parameter="organizer" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGallery" Method="UpdateGallery">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SmallImage" Parameter="smallImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="LargeImage" Parameter="largeImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="categoryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGalleryCategory" Method="UpdateGalleryCategory">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGraduation" Method="UpdateGraduation">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="artext" Type="System.String" DbType="NText" />
+    <Parameter Name="entext" Type="System.String" DbType="NText" />
+    <Parameter Name="frtext" Type="System.String" DbType="NText" />
+    <Parameter Name="categoryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arsmalltext" Type="System.String" DbType="NText" />
+    <Parameter Name="ensmalltext" Type="System.String" DbType="NText" />
+    <Parameter Name="frsmalltext" Type="System.String" DbType="NText" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGraduationCategory" Method="UpdateGraduationCategory">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGraduationFile" Method="UpdateGraduationFile">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="filename" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="GraduationId" Parameter="graduationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateGroup" Method="UpdateGroup">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateHomeGallery" Method="UpdateHomeGallery">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateNews" Method="UpdateNews">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="pdf" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateOfficialStatement" Method="UpdateOfficialStatement">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdf" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="date_in" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateOrientationFile" Method="UpdateOrientationFile">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="filename" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdatePermission" Method="UpdatePermission">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdatePolicy" Method="UpdatePolicy">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="permissionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="event_permitted" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateQuickLinks" Method="UpdateQuickLinks">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="link" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateResearchTeams" Method="UpdateResearchTeams">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enmembersText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frmembersText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="enpublicationsText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frpublicationsText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSemester" Method="UpdateSemester">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="specialityId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateServices" Method="UpdateServices">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="artitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="entitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="frtitle" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="artext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="entext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frtext" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSorting" Method="UpdateSorting">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sort" Type="System.Int32" DbType="Int" />
+    <Parameter Name="table" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSpeciality" Method="UpdateSpeciality">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="enname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="arname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="frname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetCMSUsersByID" Method="GetCMSUsersByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetCMSUsersByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="groupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAcademics" Method="CMSGetAcademics" IsComposable="true">
+    <ElementType Name="CMSGetAcademicsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cv" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAcademicsByID" Method="CMSGetAcademicsByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetAcademicsByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cv" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetActivities" Method="CMSGetActivities" IsComposable="true">
+    <ElementType Name="CMSGetActivitiesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetActivitiesByID" Method="CMSGetActivitiesByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetActivitiesByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAdministrative" Method="CMSGetAdministrative" IsComposable="true">
+    <ElementType Name="CMSGetAdministrativeResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAdministrativeByID" Method="CMSGetAdministrativeByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetAdministrativeByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAlumni" Method="CMSGetAlumni" IsComposable="true">
+    <ElementType Name="CMSGetAlumniResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAlumniByID" Method="CMSGetAlumniByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetAlumniByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAlumniEvents" Method="CMSGetAlumniEvents" IsComposable="true">
+    <ElementType Name="CMSGetAlumniEventsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organizer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AlumniId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetAlumniEventsByID" Method="CMSGetAlumniEventsByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetAlumniEventsByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organizer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AlumniId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetCalendar" Method="CMSGetCalendar" IsComposable="true">
+    <ElementType Name="CMSGetCalendarResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thumb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetCalendarById" Method="CMSGetCalendarById" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetCalendarByIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thumb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetContinuousEducation" Method="CMSGetContinuousEducation" IsComposable="true">
+    <ElementType Name="CMSGetContinuousEducationResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thumb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetContinuousEducationByID" Method="CMSGetContinuousEducationByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetContinuousEducationByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thumb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetDepartment" Method="CMSGetDepartment" IsComposable="true">
+    <ElementType Name="CMSGetDepartmentResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetDepartmentByID" Method="CMSGetDepartmentByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetDepartmentByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ardescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="endescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frdescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetEducation" Method="CMSGetEducation" IsComposable="true">
+    <ElementType Name="CMSGetEducationResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="total_hours" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="theorie" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="td" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="credits" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="pre_req" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="semesterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetEducationByID" Method="CMSGetEducationByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetEducationByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="total_hours" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="theorie" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="td" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="credits" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="pre_req" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="semesterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetEducationBySemesterID" Method="CMSGetEducationBySemesterID" IsComposable="true">
+    <Parameter Name="semesterId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetEducationBySemesterIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="total_hours" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="theorie" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="td" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="credits" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="pre_req" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="semesterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetEvents" Method="CMSGetEvents" IsComposable="true">
+    <ElementType Name="CMSGetEventsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organizer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetEventsByID" Method="CMSGetEventsByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetEventsByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Organizer" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGallery" Method="CMSGetGallery" IsComposable="true">
+    <ElementType Name="CMSGetGalleryResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SmallImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LargeImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGalleryByCategoryID" Method="CMSGetGalleryByCategoryID" IsComposable="true">
+    <Parameter Name="categoryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGalleryByCategoryIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SmallImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LargeImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGalleryByID" Method="CMSGetGalleryByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGalleryByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SmallImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LargeImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="categoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGalleryCategories" Method="CMSGetGalleryCategories" IsComposable="true">
+    <ElementType Name="CMSGetGalleryCategoriesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGalleryCategoriesByID" Method="CMSGetGalleryCategoriesByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGalleryCategoriesByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGalleryImagesByGalleryID" Method="CMSGetGalleryImagesByGalleryID" IsComposable="true">
+    <Parameter Name="galleryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGalleryImagesByGalleryIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="img" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="galleryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduation" Method="CMSGetGraduation" IsComposable="true">
+    <ElementType Name="CMSGetGraduationResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="entext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frtext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="categoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ensmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frsmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="arsmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduationByID" Method="CMSGetGraduationByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGraduationByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="entext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frtext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="categoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ensmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frsmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="arsmalltext" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduationCategories" Method="CMSGetGraduationCategories" IsComposable="true">
+    <ElementType Name="CMSGetGraduationCategoriesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduationCategoriesByID" Method="CMSGetGraduationCategoriesByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGraduationCategoriesByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduationFilesByGraduationId" Method="CMSGetGraduationFilesByGraduationId" IsComposable="true">
+    <Parameter Name="GraduationId" Parameter="graduationId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGraduationFilesByGraduationIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GraduationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetGraduationFilesById" Method="CMSGetGraduationFilesById" IsComposable="true">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetGraduationFilesByIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GraduationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetHomeGallery" Method="CMSGetHomeGallery" IsComposable="true">
+    <ElementType Name="CMSGetHomeGalleryResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetHomeGalleryByID" Method="CMSGetHomeGalleryByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetHomeGalleryByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetNews" Method="CMSGetNews" IsComposable="true">
+    <ElementType Name="CMSGetNewsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="pdf" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetNewsByID" Method="CMSGetNewsByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetNewsByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="pdf" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetOfficialStatement" Method="CMSGetOfficialStatement" IsComposable="true">
+    <ElementType Name="CMSGetOfficialStatementResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pdf" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetOfficialStatementByID" Method="CMSGetOfficialStatementByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetOfficialStatementByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pdf" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetOrientationFiles" Method="CMSGetOrientationFiles" IsComposable="true">
+    <ElementType Name="CMSGetOrientationFilesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetOrientationFilesByID" Method="CMSGetOrientationFilesByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetOrientationFilesByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetQuickLinks" Method="CMSGetQuickLinks" IsComposable="true">
+    <ElementType Name="CMSGetQuickLinksResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetQuickLinksById" Method="CMSGetQuickLinksById" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetQuickLinksByIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetResearchTeams" Method="CMSGetResearchTeams" IsComposable="true">
+    <ElementType Name="CMSGetResearchTeamsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enmembersText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="enpublicationsText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frmembersText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frpublicationsText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetResearchTeamsById" Method="CMSGetResearchTeamsById" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetResearchTeamsByIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="enmembersText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="enpublicationsText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frmembersText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="frpublicationsText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetSemesters" Method="CMSGetSemesters" IsComposable="true">
+    <ElementType Name="CMSGetSemestersResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="specialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetSemestersByID" Method="CMSGetSemestersByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetSemestersByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="specialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetSemestersBySpecialityID" Method="CMSGetSemestersBySpecialityID" IsComposable="true">
+    <Parameter Name="specialityId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetSemestersBySpecialityIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="specialityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetServices" Method="CMSGetServices" IsComposable="true">
+    <ElementType Name="CMSGetServicesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetServicesByID" Method="CMSGetServicesByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetServicesByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="artitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="entitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="frtitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="artext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="entext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frtext" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetSpeciality" Method="CMSGetSpeciality" IsComposable="true">
+    <ElementType Name="CMSGetSpecialityResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetSpecialityByID" Method="CMSGetSpecialityByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CMSGetSpecialityByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="enname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="frname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="arname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetVisitsBetwee2Dates" Method="CMSGetVisitsBetwee2Dates" IsComposable="true">
+    <Parameter Name="sdate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="edate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="CMSGetVisitsBetwee2DatesResult">
+      <Column Name="visits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetVisitsPerBrowser" Method="CMSGetVisitsPerBrowser" IsComposable="true">
+    <Parameter Name="browser" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="CMSGetVisitsPerBrowserResult">
+      <Column Name="visits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSGetVisitsPerDate" Method="CMSGetVisitsPerDate" IsComposable="true">
+    <Parameter Name="date" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="CMSGetVisitsPerDateResult">
+      <Column Name="visits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CMSLogin" Method="CMSLogin" IsComposable="true">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetCMSGroups" Method="GetCMSGroups" IsComposable="true">
+    <ElementType Name="GetCMSGroupsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSGroupsByID" Method="GetCMSGroupsByID" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetCMSGroupsByIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSPermissions" Method="GetCMSPermissions" IsComposable="true">
+    <ElementType Name="GetCMSPermissionsResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSPolicies" Method="GetCMSPolicies" IsComposable="true">
+    <ElementType Name="GetCMSPoliciesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="permissionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="groupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="event_permitted" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSPoliciesByGroupIdAndPermissionId" Method="GetCMSPoliciesByGroupIdAndPermissionId" IsComposable="true">
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="permissionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetCMSPoliciesByGroupIdAndPermissionIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="permissionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="groupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="event_permitted" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSPoliciesByGroupIdAndPermissionName" Method="GetCMSPoliciesByGroupIdAndPermissionName" IsComposable="true">
+    <Parameter Name="groupId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="permissionname" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetCMSPoliciesByGroupIdAndPermissionNameResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="permissionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="groupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="event_permitted" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCMSUsers" Method="GetCMSUsers" IsComposable="true">
+    <ElementType Name="GetCMSUsersResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_login" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
