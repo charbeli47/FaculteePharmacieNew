@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="cms.master.cs" Inherits="FacultyOfPharmacy.cms.cms" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Paweł 'kilab' Balicki - kilab.pl" />
+<title>Faculty Of Pharmacy CMS</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/navi.css" media="screen" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+    tinyMCE.init({
+        // General options
+        mode: "textareas",
+        theme: "advanced",
+        plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+
+        // Theme options
+        theme_advanced_buttons1: "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+        theme_advanced_buttons2: "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+        theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+        theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft",
+        theme_advanced_toolbar_location: "top",
+        theme_advanced_toolbar_align: "left",
+        theme_advanced_statusbar_location: "bottom",
+        theme_advanced_resizing: true,
+
+        // Example content CSS (should be your site CSS)
+        content_css: "css/content.css",
+
+        // Drop lists for link/image/media/template dialogs
+        template_external_list_url: "lists/template_list.js",
+        external_link_list_url: "lists/link_list.js",
+        external_image_list_url: "lists/image_list.js",
+        media_external_list_url: "lists/media_list.js",
+
+        // Style formats
+        style_formats: [
+			{ title: 'Bold text', inline: 'b' },
+			{ title: 'Red text', inline: 'span', styles: { color: '#ff0000' } },
+			{ title: 'Red header', block: 'h1', styles: { color: '#ff0000' } },
+			{ title: 'Example 1', inline: 'span', classes: 'example1' },
+			{ title: 'Example 2', inline: 'span', classes: 'example2' },
+			{ title: 'Table styles' },
+			{ title: 'Table row 1', selector: 'tr', classes: 'tablerow1' }
+        ],
+
+        // Replace values for the template plugin
+        template_replace_values: {
+            username: "Some User",
+            staffid: "991234"
+        }
+    });
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<div id="top">
+			<div class="left">
+				<p>Welcome, <strong><%=Session["User"] %></strong> [ <a href="logout.aspx">logout</a> ]</p>
+			</div>
+			<div class="right">
+				<div class="align-right">
+					<p>Last login: <strong><%=Session["DateLogin"]%></strong></p>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul>
+                <li class="upp"><a href="quick-links.aspx">Quick Links</a></li>
+				<li class="upp"><a href="#">Home / About Us</a>
+					<ul>
+						<li>&#8250; <a href="settings.aspx">Content</a></li>
+                        <li>&#8250; <a href="gallery.aspx">Photo Gallery</a></li>
+                        <li>&#8250; <a href="home-gallery.aspx">Home Slider</a></li>
+                        <li>&#8250; <a href="news.aspx">News</a></li>
+                        <li>&#8250; <a href="events.aspx">Events</a></li>
+					</ul>
+				</li>
+				<li class="upp"><a href="#">Admissions</a>
+                <ul>
+                    <li>&#8250; <a class="icon home_carousel" href="graduation-categories.aspx">Registration</a></li>
+                    <li>&#8250; <a class="icon home_carousel" href="orientation-files.aspx">Orientation Files</a></li>
+                </ul>
+                </li>
+                <li class="upp"><a href="#">Programs</a>
+                <ul>
+					<li>&#8250; <a class="icon users" href="specialities.aspx">Cursus</a></li>
+                    <li>&#8250; <a class="icon users" href="continuous-learning.aspx">Continuous Education</a></li>
+                    <li>&#8250; <a class="icon users" href="calendar.aspx">Calendar</a></li>
+				</ul>
+                </li>
+                <li class="upp"><a href="#">HR</a>
+                <ul>
+					<li>&#8250; <a class="icon users" href="academics.aspx">Academics</a></li>
+					<li>&#8250; <a class="icon add_user" href="administrative.aspx">Administrative</a></li>
+				</ul>
+                </li>
+                <li class="upp"><a href="#">Research</a>
+                <ul>
+					<li>&#8250; <a class="icon users" href="research-teams.aspx">Teams</a></li>
+				</ul>
+                </li>
+                <li class="upp"><a href="#">Student Life</a>
+                <ul>
+					<li>&#8250; <a class="icon users" href="Services.aspx">Services</a></li>
+                    <li>&#8250; <a class="icon users" href="Activities.aspx">Activities</a></li>
+                    
+				</ul>
+                </li>
+                <li class="upp"><a href="#">Alumni</a>
+                <ul>
+                    <li>&#8250; <a class="icon users" href="alumni-events.aspx">Events</a></li>
+                    
+				</ul>
+                </li>
+				<li class="upp"><a href="#">CMS Users</a>
+					<ul>
+						<li>&#8250; <a href="manage-users.aspx">Show all users</a></li>
+						<li>&#8250; <a href="add-new-user.aspx">Add new user</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	
+	<div id="content">
+		<div id="sidebar">
+            <div class="box">
+				<div class="h_title" onclick="window.location.href='quick-links.aspx'" style="cursor:pointer">&#8250; Quick Links</div>
+			</div>
+			<div class="box">
+				<div class="h_title">&#8250; Home / About Us</div>
+				<ul id="home">
+                    <li class="b1"><a class="icon view_page" href="settings.aspx">Content</a></li>
+                    <li class="b1"><a class="icon view_page" href="gallery.aspx">Photo Gallery</a></li>
+                    <li class="b1"><a class="icon view_page" href="home-gallery.aspx">Home Slider</a></li>
+                    <li class="b1"><a class="icon view_page" href="news.aspx">News</a></li>
+                    <li class="b1"><a class="icon view_page" href="events.aspx">Events</a></li>
+				</ul>
+			</div>
+			
+			<div class="box">
+				<div class="h_title">&#8250; Admissions</div>
+				<ul id="about_us">
+                    <li class="b1"><a class="icon view_page" href="graduation-categories.aspx">Registration</a></li>
+                    <li class="b1"><a class="icon view_page" href="orientation-files.aspx">Orientation Files</a></li>
+				</ul>   
+			</div>
+            <div class="box">
+				<div class="h_title">&#8250; Programs</div>
+				<ul id="academic_units">
+                    <li class="b1"><a class="icon users" href="specialities.aspx">Cursus</a></li>
+                    <li class="b1"><a class="icon users" href="continuous-learning.aspx">Continuous Education</a></li>
+                    <li class="b1"><a class="icon users" href="calendar.aspx">Calendar</a></li>
+				</ul>
+			</div>
+            <div class="box">
+				<div class="h_title">&#8250; HR</div>
+				<ul id="faculty_affairs_office">
+                    <li class="b1"><a class="icon users" href="academics.aspx">Academics</a></li>
+					<li class="b1"><a class="icon add_user" href="administrative.aspx">Administrative</a></li>
+				</ul>
+			</div>
+            <div class="box">
+				<div class="h_title">&#8250; Research</div>
+				<ul id="research">
+                    <li class="b1"><a class="icon users" href="research-teams.aspx">Teams</a></li>
+				</ul>
+			</div>
+            <div class="box">
+				<div class="h_title">&#8250; Student Life</div>
+				<ul id="faculty">
+					<li class="b1"> <a class="icon users" href="Services.aspx">Services</a></li>
+                    <li class="b1"> <a class="icon users" href="Activities.aspx">Activities</a></li>
+				</ul>
+			</div>
+            <div class="box">
+				<div class="h_title">&#8250; Alumni</div>
+				<ul id="Ul1">
+                    <li class="b1"> <a class="icon users" href="alumni-events.aspx">Events</a></li>
+				</ul>
+			</div>
+			<div class="box">
+				<div class="h_title">&#8250; CMS Users</div>
+				<ul id="users">
+					<li class="b1"><a class="icon users" href="manage-users.aspx">Show all users</a></li>
+					<li class="b2"><a class="icon add_user" href="add-new-user.aspx">Add new user</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+		<div class="clear"></div>
+	</div>
+
+	<div id="footer">
+		<div class="left">
+			<p><a >Faculty Of Pharmacy</a></p>
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

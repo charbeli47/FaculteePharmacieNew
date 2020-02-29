@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacultyOfPharmacy", "FacultyOfPharmacy\FacultyOfPharmacy.csproj", "{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{A2284345-5CCC-4042-B57D-511ED4587910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B7D401-E0A8-4496-ABDC-6D88A7AE88EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2284345-5CCC-4042-B57D-511ED4587910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2284345-5CCC-4042-B57D-511ED4587910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2284345-5CCC-4042-B57D-511ED4587910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2284345-5CCC-4042-B57D-511ED4587910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

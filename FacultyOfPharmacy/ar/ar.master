@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="ar.master.cs" Inherits="FacultyOfPharmacy.ar.ar" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:ContentPlaceHolder ID="head" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menu" runat="server">
+<ul id="cbp-tm-menu" class="cbp-tm-menu" dir="rtl">
+				<li style="float:right">
+				<a href="#">الرئيسية</a>
+                <ul class="cbp-tm-submenu">
+                <li><a href="ul.aspx" class="cbp-tm-icon-article">الجامعة اللبنانية</a></li>
+                <li><a href="faculty-of-pharmacy.aspx" class="cbp-tm-icon-article">كلية الصيدلة</a></li>
+                <li></li>
+                </ul>
+				</li>
+				<li style="float:right">
+					<a href="#">من نحن</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="mission.aspx" class="cbp-tm-icon-contract">المهمة</a></li>
+						<li><a href="obectives.aspx" class="cbp-tm-icon-pencil">الأهداف</a></li>
+                        <li><a href="events.aspx" class="cbp-tm-icon-screen">أحداث</a></li>
+                        <li><a href="news.aspx" class="cbp-tm-icon-article">أخبار</a></li>
+                        <li><a href="official-statements.aspx" class="cbp-tm-icon-article">التصريحات الرسميةs</a></li>
+					</ul>
+				</li>
+				<li style="float:right">
+					<a href="#">الوحدات الأكاديمية</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="departments.aspx" class="cbp-tm-icon-earth">أقسام</a></li>
+						<li><a href="units.aspx" class="cbp-tm-icon-users">الوحدات</a></li>
+					</ul>
+				</li>
+				<li style="float:right">
+					<a href="#">مكتب شؤون أعضاء هيئة التدريس</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="academics.aspx" class="cbp-tm-icon-contract">الأكاديميين</a></li>
+						<li><a href="administratifs.aspx" class="cbp-tm-icon-pencil">اداريون</a></li>
+					</ul>
+				</li>
+                <li style="float:right">
+					<a href="#" >كلية</a>
+					<ul class="cbp-tm-submenu">
+						<li><a href="education.aspx" class="cbp-tm-icon-cog">تعليم</a></li>
+						<li><a href="continuous-learning.aspx" class="cbp-tm-icon-pencil">التعلم المستمر</a></li>
+                        <li><a href="useful-links.aspx" class="cbp-tm-icon-link">روابط مفيدة</a></li>
+                        <li><a href="recherche.aspx" class="cbp-tm-icon-link">الأبحاث</a></li>
+                        <li><a id="A1" href="http://www.sisol.ul.edu.lb/" runat="server" class="cbp-tm-icon-link" target="_blank">بوابة الطلاب</a></li>
+					</ul>
+				</li>
+                <li>
+					<a href="#" >&nbsp;</a>
+					
+				</li>
+			</ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<div style="direction:rtl">
+<asp:ContentPlaceHolder ID="main" runat="server" />
+</div>
+</asp:Content>
